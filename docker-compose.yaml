@@ -1,0 +1,10 @@
+services:
+  ansible:
+    image: pranavmishra90/ansible
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        IMAGE_VERSION: $IMAGE_VERSION
+      tags:
+        - "pranavmishra90/ansible:latest"

@@ -9,3 +9,6 @@ RUN apk add --no-cache \
 	just \
 	py3-dnspython \
 	py3-passlib
+
+RUN git config --global --add safe.directory /work
+WORKDIR /work

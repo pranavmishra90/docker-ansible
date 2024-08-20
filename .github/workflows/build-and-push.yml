@@ -16,14 +16,14 @@ jobs:
   build-and-push:
     runs-on: ubuntu-latest
     steps:
-    -   name: Checkout code
+      - name: Checkout code
         uses: actions/checkout@v4
-    
-    - name: Read the image version
-      id: image_version
-      uses: juliangruber/read-file-action@v1
-      with:
-        path: ./image_version.txt
+  
+      - name: Read the image version
+        id: image_version
+        uses: juliangruber/read-file-action@v1
+        with:
+          path: ./image_version.txt
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
